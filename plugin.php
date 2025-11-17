@@ -1,43 +1,43 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
- * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Plugin Name: Movio TMDB
+ * Plugin URI: https://blablaa.fr
+ * Description: Module Breakdance pour TMDB
+ * Author: Guillaume
+ * Author URI: https://blablaa.fr
  * License: GPLv2
- * Text Domain: breakdance
+ * Text Domain: Breakdance
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace MovioTmdb;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'MovioTmdb',
         'element',
-        'Custom Elements',
+        'Movio Custom Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'MovioTmdb',
         'macro',
-        'Custom Macros',
+        'Movio Custom Macros',
         false,
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'MovioTmdb',
         'preset',
-        'Custom Presets',
+        'Movio Custom Presets',
         false,
     );
 },
