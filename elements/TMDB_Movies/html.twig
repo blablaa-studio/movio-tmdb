@@ -1,0 +1,11 @@
+{% set api_key = content.param.api_key|default('') %}
+{% set endpoint = content.param.endpoint|default('popular') %}
+{% set limit = content.param.limit|default(10) %}
+
+<div class="bde-tmdb-movies-content">
+    {% if api_key %}
+        {{ tmdb_render(api_key, endpoint, limit)|raw }}
+    {% else %}
+        <p class="tmdb-error">Veuillez entrer votre clé API TMDB dans les paramètres de l'élément</p>
+    {% endif %}
+</div>
